@@ -1,0 +1,266 @@
+@import url(http://fonts.googleapis.com/css?family=Abel|Satisfy);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300);
+@import url(https://fonts.googleapis.com/css?family=Asap:400,400italic,700,700italic);
+body{
+	/* font-family: helvetica, verdana, tahoma, sans-serif; */
+	background-image: url('img/img01.png');
+	background-repeat: repeat;
+}
+
+h2{
+	font-family: 'Oswald', sans-serif;
+	font-size: 3em;	
+}
+
+hr{
+	
+}
+
+div.global{
+	max-width: 1512px;
+}
+
+/*///======= Barra de Navegação =======\\\*/
+
+div.barra{
+	margin: 0px auto;
+	width: 100%;
+	min-height: 100px;
+	max-width: 1512px;
+	position: fixed;
+	z-index: 1;
+}
+
+div.menubar{
+	min-height: 100px;
+	background: #45543D;
+	padding-left: 0px;
+}
+
+div.container{
+	margin-left: 10%;
+
+}
+
+div#logo{
+	width: 30%;
+	float: left;
+	padding-top: 2.4em;
+	text-transform: uppercase;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+div#logo a{
+	text-decoration: none;
+	font-size: 2em;
+	color: #fff;
+}
+
+ul.menu{
+	padding-top: 1.8em;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+ul.menu li.item-menu:hover{
+}
+
+ul.menu li.item-menu a.link-menu{
+	color: #fff;
+	font-size: 1.2em;
+	text-shadow: none;
+}
+
+ul.menu li.item-menu a.link-menu:hover{
+	color: #ccc;
+}
+
+.navbar .nav li.dropdown > .dropdown-toggle .down {
+  border-top-color: #000;
+  border-bottom-color: #000;
+}
+
+.navbar .nav li.dropdown:hover > .dropdown-toggle .down {
+  border-top-color: #eee;
+  border-bottom-color: #eee;
+}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle .down,
+.navbar .nav li.dropdown.active > .dropdown-toggle .down,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle .down {
+  border-top-color: #555555;
+  border-bottom-color: #555555;
+}
+
+
+/**************************************************
+ ================ Conteúdo Home ===================
+ **************************************************/
+
+/*//======= banner =======\\\*/
+#container-banner{
+	margin-top: 70px;
+	border-bottom: 5px solid #45543D;
+}
+
+#container-banner img{
+	width: 100%;
+	height: auto;
+}
+
+#row{
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+}
+
+#row h2{
+	color: #33443a;
+	margin-top: 1em;
+	padding-bottom: 0.6em;
+}
+
+#row p{
+	font-size: 1.4em;
+	font-weight: 400;
+	padding-bottom: 1.2em;
+}
+
+#row button{
+	background: #45543D;
+	width: 8em;
+	height: 3em;
+	font-size: 1.8em;
+	color: #FFF;
+	cursor: pointer;
+	margin-bottom: 3em;
+}
+
+.carrossel hr{
+	margin:0.1em auto 3em auto;
+	width: 100%;
+	background-color: #aaa;
+	border-top: 1px solid #888;
+}
+
+.carrossel h3{
+	font-size: 1.8em;
+	margin-bottom:0;
+	font-weight: lighter;
+	color: #555;
+	font-family: 'Oswald', sans-serif;
+}
+
+
+.item-carrossel{
+	background-color: #aaa;
+	padding: 1em;
+
+}
+
+.item-carrossel h3{
+	text-align: center;
+	font-family: 'Asap', sans-serif;
+}
+
+.item-carrossel img{
+	width: 100%;
+	max-height: 180px;
+	margin-bottom: 1em;
+	border: 1px solid #333;
+	box-shadow: 2px 2px 2px #000;
+}
+
+.item-carrossel p{
+	text-align: justify;
+}
+
+.servicos hr{
+	margin:0.1em auto 3em auto;
+	width: 100%;
+	background-color: #aaa;
+	border-top: 1px solid #888;
+}
+
+.servicos h3{
+	font-size: 1.8em;
+	margin-bottom:0;
+	font-weight: lighter;
+	color: #555;
+	font-family: 'Oswald', sans-serif;
+}
+
+
+/* .header{
+	margin: auto;
+}
+*/
+
+#marketing {
+	overflow: hidden;
+}
+
+#marketing .divider {
+	margin-bottom: 3em;
+	padding-bottom: 3em;
+	border-bottom: 0.063em solid #D4D6D8;
+}
+
+#marketing .title {
+	padding-bottom: .75em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.5em;
+	color: #272727;
+}
+
+#marketing .subtitle {
+	padding-bottom: 1em;
+	font-weight: bold;
+	color: #464646;
+}
+
+
+
+ .div-logo{
+
+}
+
+.div-dados{
+	background: #0a0;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	font-weight: bolder;
+	padding-bottom: 10px;
+	padding-left: 5px;
+}
+
+.div-login{
+	margin-left: 0;
+}
+
+.btn-login{
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.label-usuario{
+
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 5px;
+	font-size: 15px;
+} */
+
+
+/*///======= Rodapé =======\\\*/
+
+div.rodape{
+	background: #efe;
+	position: absolute;
+	bottom: 0;
+}
+
+@media (max-width: 979px) {
+
+
+
+}

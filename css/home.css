@@ -1,0 +1,44 @@
+
+
+/*============== Carrossel ==========*/
+
+.banner-inner{
+	height: 480px;
+}
+
+.img-banner{
+	width: 100%;
+	height: 480px;
+}
+
+
+
+.li-servico{
+	
+}
+
+.quadro-servico{
+	padding: 5px 20px;
+	height: 500px;
+}
+
+.quadro-servico h3{
+	background-color: #090;
+	padding: 0 5px;
+	text-align: center;
+	box-shadow: -2px 0px 0px #333;
+}
+
+.img-servico{
+	height: 215px;
+	width: 100%;
+}
+
+.quadro-servico p{
+	padding-top: 10px;
+	font-size: 18px;
+	text-align: justify;
+	font-weight: bold;
+	color: #333;
+}
+
