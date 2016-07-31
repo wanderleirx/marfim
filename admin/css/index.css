@@ -1,0 +1,23 @@
+body{
+	background-color: #fefefe;
+}
+
+/*===================================================================
+=============== Conteudo da pagina - Index.php  =====================
+====================================================================*/
+
+.login{
+	background-color: #033;
+	max-width: 400px;
+	margin: auto;
+	padding: 20px;
+	border-radius: 5px;
+	margin-top: 200px;
+}
+
+.login legend{
+	color: #eee;
+}
+
+.form-login{
+	margin: auto;

@@ -13,6 +13,8 @@
         <script src="../js/jquery.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/funcoes.js"></script>
+        <script src="../js/form_validates.js"></script>
+        <script src="../js/money-blur.js"></script>
 
     </head>
     <body>

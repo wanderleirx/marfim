@@ -10,12 +10,17 @@
 
 /*///======= Tags padrões =======\\\*/
 
+
 body{
 	/* font-family: helvetica, verdana, tahoma, sans-serif; */
 	background-image: url('img/img01.png');
 	background-repeat: repeat;
 	height: 100%;
-	
+}
+
+section#container{
+	min-height: 100%;
+	position: relative;
 }
 
 h2{
@@ -38,10 +43,6 @@ h3.divide{
 	font-family: 'Oswald', sans-serif;
 }
 
-div.global{
-	max-width: 1512px;
-}
-
 /*///======= Barra de Navegação =======\\\*/
 
 div.barra{
@@ -49,7 +50,6 @@ div.barra{
 	width: 100%;
 	min-height: 100px;
 	max-width: 1512px;
-	position: fixed;
 	z-index: 100;
 }
 
@@ -60,12 +60,12 @@ div.menubar{
 }
 
 div.container{
-	margin-left: 10%;
+	margin-left: 5%;
 
 }
 
 div#logo{
-	width: 30%;
+	width: 60%;
 	float: left;
 	padding-top: 2.4em;
 	text-transform: uppercase;
@@ -78,6 +78,11 @@ div#logo a{
 	color: #fff;
 }
 
+div#logo small{
+	font-size: 1em;
+	color: #ccc;
+}
+
 ul.menu{
 	padding-top: 1.8em;
 	font-family: 'Roboto+Condensed', sans-serif;
@@ -85,6 +90,7 @@ ul.menu{
 
 
 ul.menu li a {
+
 }
 
 ul.menu li.item-menu a.link-menu{
@@ -114,127 +120,100 @@ ul.menu li.item-menu a.link-menu:hover{
   border-bottom-color: #555555;
 }
 
+.login{
+	clear: both;
+	min-height: 30px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	margin: 0 0.2%; 
+	padding: 2px 0.5%;
+}
+
+.login span{
+	text-align: left;
+}
 section#content{
 	margin-top: 70px;
 	margin-bottom: 100px;
 }
 
+
 /**************************************************
- ================ Conteúdo Home ===================
+ ================ Conteúdo  ===================
  **************************************************/
+
+/*= Tabela de dados */
+
+.table-crud{
+	background-color: #fff;
+}
+
+legend.table{
+	font-weight: bolder;
+}
+
+.table-crud th{
+	vertical-align: middle;
+	font-size: 18px;
+	height: 30px;
+}
+
+/*= FIM Tabela de dados */
+
+/*= Formulário de incluir e Editar */
+
+.legend-form{
+	font-weight: bolder;
+}
+
+.form-crud{
+	border: 2px solid #ccc;
+	background-color: #ddd;
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+
+.form-crud label, .form-crud select{
+	font-weight: bolder;
+	font-size: 18px;
+}
+
+.form-crud input{
+	height: 40px;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+
+
+/*=FIM -> Formulário de incluir e Editar */
+
 
 /*//======= banner =======\\\*/
 
-#banner-container{
-	overflow: hidden;
-	border-bottom: 5px solid #45543D;
-	background-color: #000;
-	max-height: 360px;
-}
 
-#carrossel{
-
-}
-
- img.item{
-	width: 100%;
-	height: auto;
-}
-
-/*///======= Div Orçamento =======\\\*/
-
-
-#row{
-	text-align: center;
-	font-family: 'Oswald', sans-serif;
-}
-
-#row h2{
-	color: #33443a;
-	margin-top: 1em;
-	padding-bottom: 0.6em;
-}
-
-#row p{
-	font-size: 1.4em;
-	font-weight: 400;
-	padding-bottom: 1.2em;
-}
-
-#row button{
-	background: #45543D;
-	width: 8em;
-	height: 3em;
-	font-size: 1.8em;
-	color: #FFF;
-	cursor: pointer;
-	margin-bottom: 3em;
-}
-
-/*///======= Carrossel Locais de atendimento =======\\\*/
-
-.carrossel hr{
-	margin:0.1em auto 3em auto;
-	width: 100%;
-	background-color: #aaa;
-	border-top: 1px solid #888;
-}
-
-.carrossel h3{
-	font-size: 1.8em;
-	margin-bottom:0;
-	font-weight: lighter;
-	color: #555;
-	font-family: 'Oswald', sans-serif;
-}
-
-
-.item-carrossel{
-	background-color: #aaa;
-	padding: 1em;
-
-}
-
-.item-carrossel h3{
-	text-align: center;
-	font-family: 'Asap', sans-serif;
-}
-
-.item-carrossel img{
-	width: 100%;
-	max-height: 180px;
-	margin-bottom: 1em;
-	border: 1px solid #333;
-	box-shadow: 2px 2px 2px #000;
-}
-
-.item-carrossel p{
-	text-align: justify;
-}
-
-/*///======= Servicos =======\\\*/
-
-.servicos hr{
-	margin:0.1em auto 3em auto;
-	width: 100%;
-	background-color: #aaa;
-	border-top: 1px solid #888;
-}
-
-.servicos h3{
-	font-size: 1.8em;
-	margin-bottom:0;
-	font-weight: lighter;
-	color: #555;
-	font-family: 'Oswald', sans-serif;
-}
 
 
 
 /**************************************************
  ================ Conteúdo Serviços ===============
  **************************************************/
-.container-tab-servico{
+/* .container-tab-servico{
 
 }
 
@@ -252,13 +231,13 @@ section#content{
 
 #myTabContent {
 	padding-top: 2em;
-}
+} */
 
 /**************************************************
  ================ Conteúdo Orçamentos ===============
  **************************************************/
 
-#form-orcamento label{
+/* #form-orcamento label{
 	font-size: 1.4em;
 	font-family: 'Oswald', sans-serif;
 }
@@ -270,7 +249,7 @@ section#content{
 }
 label#comodo, label#ambiente, input#medida, input#tipoMedida {
 	display: none;
-}
+} */
 
 
 
@@ -278,7 +257,7 @@ label#comodo, label#ambiente, input#medida, input#tipoMedida {
  ================ Conteúdo Contatos ===============
  **************************************************/
 
-#form-contatos label{
+/* #form-contatos label{
 	font-size: 1.4em;
 }
 
@@ -289,9 +268,9 @@ label#comodo, label#ambiente, input#medida, input#tipoMedida {
 }
 
 .conteudo-contatos{
+	border: 5px solid #aabbff;
 	border-radius: 5px;
 	padding: 10px;
-	background-color: ;
 
 }
 
@@ -307,7 +286,7 @@ label#comodo, label#ambiente, input#medida, input#tipoMedida {
 	font-size: 1.2em;
 	font-weight: bold;
 }
-
+ */
 
 
 
@@ -315,7 +294,7 @@ label#comodo, label#ambiente, input#medida, input#tipoMedida {
  ================ Rodapé Padrão ===================
  **************************************************/
 
-.rodape{
+/* .rodape{
 	padding-top: 40px;
 	clear: both;
 	background-image: url('img/img07.png');
@@ -347,7 +326,7 @@ label#comodo, label#ambiente, input#medida, input#tipoMedida {
 
 #box2 span{
 	font-family: 'Oswald', sans-serif;
-	font-size: 1.2em;
+	font-size: 1.4em;
 }
 
 
@@ -367,7 +346,7 @@ label#comodo, label#ambiente, input#medida, input#tipoMedida {
 	list-style-type: none;
 	display: inline;
 }
-
+ */
 .copyright{
 	text-align: center;
 	line-height: 60px;
@@ -375,6 +354,7 @@ label#comodo, label#ambiente, input#medida, input#tipoMedida {
 	font-family: 'Oswald', sans-serif;
 	font-size: 1em;
 	background-color: #aaa;
+	
 }
 
 @media (max-width: 979px) {
