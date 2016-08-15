@@ -44,7 +44,6 @@ function startSession ($data) {
 		$_SESSION['email'] = $email;
 		$_SESSION['nome'] = $nome;
 		$_SESSION['id_usuario'] = $id_usuario;
-		alert($_SESSION['nome']);
 	}
 }
 

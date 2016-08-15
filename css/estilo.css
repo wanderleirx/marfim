@@ -42,13 +42,18 @@ div.global{
 	max-width: 1512px;
 }
 
+.asterisco{
+	color: red;
+	font-size: 1.2em;
+	margin-bottom: 0px;
+}
+
 /*///======= Barra de Navegação =======\\\*/
 
 div.barra{
 	margin: 0px auto;
 	width: 100%;
 	min-height: 100px;
-	max-width: 1512px;
 	position: fixed;
 	z-index: 100;
 }
@@ -132,14 +137,35 @@ section#content{
 	max-height: 360px;
 }
 
-#carrossel{
-
+li.atend{
+	background-color: #bbb;
+	border-radius: 2px;
 }
 
- img.item{
+li.atend h3{
+	margin-top: auto;
+	text-align: center;
+	background-color: #999;
+	box-shadow: -1px 0px 0px #555;
+	color: #333;
+}
+
+li.atend img{
+	width: 98%;
+	min-height: 220px;
+}
+
+li.atend p{
+	padding: 4px;
+	min-height: 100px;
+	font-family: 'Asap', sans-serif;
+}
+img.item{
 	width: 100%;
 	height: auto;
 }
+
+
 
 /*///======= Div Orçamento =======\\\*/
 
@@ -347,7 +373,7 @@ label#comodo, label#ambiente, input#medida, input#tipoMedida {
 
 #box2 span{
 	font-family: 'Oswald', sans-serif;
-	font-size: 1.2em;
+	font-size: 1.0em;
 }
 
 

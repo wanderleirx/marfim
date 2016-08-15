@@ -1,3 +1,4 @@
+<?php include_once('../service/GeneralService.php') ?>
 <header id="header" class="">
    <div class="row-fluid">
       <div class="span12 global"> <!-- Div Global -->

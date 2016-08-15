@@ -1,6 +1,7 @@
 <?php 
+   include_once('../service/GeneralService.php');
    include_once('../include/head.php');
-   include('../include/header.php');
+   include_once('../include/header.php');
 ?>
 <section id="content">
    <div class="row-fluid">
@@ -8,10 +9,10 @@
          <div id="banner-container">
             <div id="carrossel" class="carousel slide">
                <div class="carousel-inner banner-inner"  >
-                  <?php for($i=0;$i<2;$i++): ?>
-                  <img src="../img/slide.jpg" class="img-responsive active item" alt="">
-                  <img src="../img/slide.jpg" class="img-responsive item" alt="">
-                  <?php endfor; ?>
+                  <img src='../img/slide3.jpg' class='img-responsive active item' alt=''>
+                  <?php foreach($banner as $res): extract($res); ?>
+                     <?php echo "<img src='../img/uploads/$img_banner' class='img-responsive item' alt=''>" ?>
+                  <?php endforeach; ?>
                </div>
                <a class="carousel-control left" href="#carrossel" data-slide="prev">&lsaquo;</a>
                <a class="carousel-control right" href="#carrossel" data-slide="next">&rsaquo;</a>
@@ -32,19 +33,30 @@
       <div class="span10 offset1 carrossel"> <!-- Div Locais de Atendimento  -->
          <h3>Atendimento</h3>
          <hr/>
-            <?php for($i=0;$i<2;$i++): ?>
-            <ul class="thumbnails">
-               <?php for($j=0;$j<3;$j++):?>
-               <li class="span4 item-carrossel">
+            <ul class="thumbnails" style="">
+            <?php foreach($linha1 as $res): extract($res);?>
+               <li class="span3 atend">
                   <div class="thumbnail inner-border">
-                     <h3>Teste</h3>
-                     <img src="../img/casa.jpg" class="img-responsive img-carrossel" alt="">
-                     <p class="">Texto do thumbnail... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <!-- exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat --> nulla pariatur.</p>
+                     <h3><?= $titulo1 ?></h3>
+                     <img src="../img/uploads/<?=$img_linha1?>" class="img-responsive ">
+                     <p class=""><?= $texto1 ?></p>
                   </div>
                </li>
-               <?php endfor; ?>
+            <?php endforeach; ?>
             </ul>
-            <?php endfor; ?>
+            <?php if($numLinha2 > 0): ?>
+            <ul class="thumbnails" style="">
+            <?php foreach($linha2 as $res): extract($res);?>
+               <li class="span3 atend">
+                  <div class="thumbnail inner-border">
+                     <h3><?= $titulo2 ?></h3>
+                     <img src="../img/uploads/<?=$img_linha2?>" class="img-responsive ">
+                     <p class=""><?= $texto2 ?></p>
+                  </div>
+               </li>
+            <?php endforeach; ?>
+            </ul>
+         <?php endif; ?>
       </div>
    </div>
    <div class="row-fluid servicos">
@@ -52,10 +64,10 @@
          <h3>Serviços</h3>
          <hr/>
          <div class="row-fluid servicos">
-            <?php for($i=0;$i<6;$i++): ?>
-               <div class="span2">
-                  <h4>Rótulo para a miniatura</h4>
-                  <p class="" style="text-align: justify;">Texto do thumbnail... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <!-- exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat --> nulla pariatur.</p>
+            <?php for($i=0;$i<1;$i++): ?>
+               <div class="span12">
+                  <p class="lead">Prestamos os mais variados tipos de serviço no combate de pragas urbanas. Desinsetização, Desratização, Descupinização, Controle de pombos, Higienização de caixa d'agua, entre outros.</p>
+                  <p class="lead">Click no link e veja a descrição de cada tipo de serviços <a href="servicos.php" class="btn btn-success">Saiba mais</a></p>
                </div>
             <?php endfor; ?>
          </div>

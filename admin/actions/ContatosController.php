@@ -11,8 +11,8 @@
 		$originName = $_FILES['iconContato']['name'];
 		validateInsertContactsTable($contactName, $descriptionContact, $fileSize, $fileType, $tempName, $originName);
 	}
-	elseif(isset($_POST['enviar']) && !empty($_POST['nomeContato']) && !empty($_POST['descricaoContato']) && $_POST['operacao'] == 'edit' && $_FILES['iconContato']['size'] > 0 ){
-		$id = $_POST['operacao'];
+	elseif(isset($_POST['editar']) && !empty($_POST['idContato']) && !empty($_POST['nomeContato']) && !empty($_POST['descricaoContato']) && $_POST['operacao'] == 'edit' && $_FILES['iconContato']['size'] > 0 ){
+		$id = $_POST['idContato'];
 		$contactName = $_POST['nomeContato'];
 		$descriptionContact = $_POST['descricaoContato'];
 		$fileSize = $_FILES['iconContato']['size'];
@@ -23,6 +23,6 @@
 	}
 	else{
 		$_SESSION['error'] = 'Todos os campos devem ser preenchido!';
-		pageRedirects('../view/form-contatos.php');
+		pageRedirects('../view/contatos.php');
 	}
 	 	

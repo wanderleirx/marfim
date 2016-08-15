@@ -35,7 +35,7 @@
 				<label class="control-label" for="imgBanner">IMG</label>
 				<span class="label label-info">A imagem deve conter 50 pixel de altura e largura</span>
 				<div class="controls">
-					<input type="text" class="span10" id="uploadFile" placeholder="Escolha a imagem" value="" disabled="disabled" />
+					<input type="text" class="span9" id="uploadFile" placeholder="Escolha a imagem" value="" disabled="disabled" />
 					<div class="fileUpload btn btn-primary">
 						<span>Upload</span>
 						<input type="file" class="upload" name="iconContato" id="arquivo" onchange="filePathCreate();" value="" required>
@@ -52,10 +52,10 @@
 	 	-->
    	<div class="span5">
    		<legend class="legend-form">Editar Contato</legend>
-         <form class="form form-crud" action="../actions/BannerController.php" method="post" onsubmit="return validateFormContatoEdit();" enctype="multipart/form-data">
+         <form class="form form-crud" action="../actions/ContatosController.php" method="post" onsubmit="return validateFormContatoEdit();" enctype="multipart/form-data">
             <label class="input" for="idBanner">ID</label>
             <div class="controls">
-					<select class="span12" name="idContato" id="idContato" required="required">
+					<select class="span12" name="idContato" id="idContato2" required="required">
 						<option value="" selected="selected" disabled="disabled">Escolha o ID</option>
 						<?php foreach($data as $res):	extract($res); ?>
 							<option value=" <?= $id_contato; ?> "> <?= $id_contato ?> </option>
@@ -74,7 +74,7 @@
 				<label class="control-label" for="imgBanner">IMG</label>
 				<span class="label label-info">A imagem deve conter 50 pixel de altura e largura</span>
 				<div class="controls">
-					<input type="text" class="span10" id="uploadFile2" placeholder="Escolha a imagem" value="" disabled="disabled" />
+					<input type="text" class="span9" id="uploadFile2" placeholder="Escolha a imagem" value="" disabled="disabled" />
 					<div class="fileUpload btn btn-primary">
 						<span>Upload</span>
 						<input type="file" class="upload" name="iconContato" id="arquivo2" onchange="filePathEdit();" value="" required>

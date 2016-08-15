@@ -19,65 +19,41 @@
 			<?php endif; ?>			
 		</div>
 	</div>
-	<div class="row-fluid">
-   	<div class="span5 offset1">
-			<legend class="legend-form">Incluir Novo Atendimento</legend>
-			<form class="form form-crud"  name="form" action="../actions/AtendimentoController.php" method="post"  enctype="multipart/form-data" >
-				<label class="control-label" for="titulo">Titulo:</label>
-				<div class="controls">
-					<input type="text" class="span12" name="titulo" id="titulo" placeholder="Titulo do Atendimento" value="" required>
-				</div>
-				<label class="control-label" for="texto">Texto</label>
-				<div class="controls">
-					<textarea class="span12" name="texto" id="texto" rows="5"></textarea>
-				</div>
-				<input type="hidden" name="operacao" value="create">
-				<label class="control-label" for="imgBanner">IMG</label>
-				<div class="controls">
-					<input type="text" class="span10" id="uploadFile" placeholder="Escolha a imagem" value="" disabled="disabled" />
-					<div class="fileUpload btn btn-primary">
-						<span>Upload</span>
-						<input type="file" class="upload" name="imgAtendiemnto" id="arquivo" onchange="filePathCreate();" required>
-					</div>
-				</div>
-				<div id="img"></div>
-				<div class="controls">
-					<input type="submit" class="btn btn-inverse" name="enviar" value="Enviar">
-				</div>
-			</form>
-   	</div>
 		<!--
 	 	// Formulário para Alterar dados natabela
 	 	-->
-   	<div class="span5">
-   		<legend class="legend-form">Editar Atendimento</legend>
+	<div class="row-fluid">
+   	<div class="span10 offset1">
+   		<legend class="legend-form">Editar Linha 1</legend>
          <form class="form form-crud" action="../actions/AtendimentoController.php" method="post" enctype="multipart/form-data">
             <label class="input" for="idBanner">ID</label>
             <div class="controls">
-					<select class="span12" name="idContato" id="idContat2" required="required">
+					<select class="span12" name="idLinha1" id="idLinha1" required="required">
 						<option value="" selected="selected" disabled="disabled">Escolha o ID</option>
-						<?php foreach($data as $res):	extract($res); ?>
-							<option value=" <?= $id_contato; ?> "> <?= $id_contato ?> </option>
+						<?php foreach($linha1 as $res):	extract($res); ?>
+							<option value=" <?= $id_linha1; ?> "> <?= $id_linha1 ?> </option>
 						<?php endforeach; ?>
 					</select>
             </div>
-            <form class="form form-crud"  name="form" action="../actions/AtendimentoController.php" method="post" onsubmit="return validateFormContatoInclude()" enctype="multipart/form-data" >
-				<label class="control-label" for="titulo">Titulo:</label>
+				<label class="control-label" for="titulo1">Titulo:</label>
 				<div class="controls">
-					<input type="text" class="span12" name="titulo" id="titulo2" placeholder="Titulo do Atendimento" value="" required>
+					<input type="text" class="span12" name="titulo1" id="titulo1" placeholder="Titulo do Atendimento" value="" required>
 				</div>
 				<label class="control-label" for="texto">Texto</label>
 				<div class="controls">
-					<textarea class="span12" name="texto" id="texto2" rows="5"></textarea>
+					<textarea class="span12" name="texto1" id="texto1" rows="5"></textarea>
 				</div>
-				<input type="hidden" name="operacao" value="edit">
-				<label class="control-label" for="imgBanner">IMG</label>
+				<label class="control-label" for="imgLinha1">IMG</label>
 				<div class="controls">
 					<input type="text" class="span10" id="uploadFile2" placeholder="Escolha a imagem" value="" disabled="disabled" />
 					<div class="fileUpload btn btn-primary">
 						<span>Upload</span>
-						<input type="file" class="upload" name="imgAtendiemnto" id="arquivo2" onchange="filePathEdit();" required>
+						<input type="file" class="upload" name="imgLinha1" id="arquivo" onchange="filePathCreate();" required>
 					</div>
+				</div>
+            <div class="controls">
+					<label class="" for="idAtivo1">Ativo</label><input checked="checked" type="radio" name="ativo" id="idAtivo1" value="1">
+					<label class="" for="idAtivo2">Dasativado</label><input type="radio" name="ativo" id="idAtivo2" value="0">
 				</div>
             <div class="controls">
                <input type="submit" name="editar" class="btn btn-inverse" value="Editar" />
@@ -93,24 +69,98 @@
 	      <div class="row-fluid">
 				<div class="span10 offset1">
 					<table class="table table-striped table-bordered table-crud">
-						<legend class="table">Dados Tabela Contatos</legend>
+						<legend class="table">Dados Tabela Linha 1</legend>
 						<thead class="thead">
 							<tr>
 								<th>#</th>
-								<th>Nome</th>
-								<th>Descrição</th>
-								<th>Icone</th>
-								<th>Excluir</th>
+								<th>Titulo</th>
+								<th>Texto</th>
+								<th>Imagem</th>
+								<th>Status</th>
 							</tr>
 						</thead>
 						<tbody>
-							<?php foreach($data as $res):	extract($res); ?>
+							<?php foreach($linha1 as $res):	extract($res); ?>
 							<tr>
-								<td><?php echo $id_contato; ?></td>
-								<td><?php echo $nm_contato; ?></td>
-								<td><?php echo $ds_contato; ?></td>
-								<td><?php echo "<img src='../../img/uploads/{$img_atendimento}' alt='' width='25' >" ?></td>
-								<td><?php echo"<a href='../actions/ExcluirController.php?id=$id_atendimento&table=$table&idAtendimento=id_atendimento&page=$page'onclick='return confirmDelete();' class='btn btn-warning'><i class='icon-remove-sign'></i></a>";?></td>
+								<td><?php echo $id_linha1; ?></td>
+								<td><?php echo $titulo1; ?></td>
+								<td><?php echo $texto1; ?></td>
+								<td><?php echo "<img src='../../img/uploads/{$img_linha1}' alt='' width='50' >" ?></td>
+								<td><?php if($ativo == 1){echo "<a href='../actions/AtendimentoController.php?id=$id_linha1&active=false&table=linha1'><i class='icon-ok'></i></a>";}else{echo "<a href='../actions/AtendimentoController.php?id=$id_linha1&active=true&table=linha1'><i class='icon-off'></i></a>";} ?><?php  ?></td>
+							</tr>
+							<?php endforeach; ?>
+						</tbody>
+					</table>
+				</div>
+			</div>
+      </div>
+   </div>
+
+   <div class="row-fluid">
+   	<div class="span10 offset1">
+   		<legend class="legend-form">Editar Linha 2</legend>
+         <form class="form form-crud" action="../actions/AtendimentoController.php" method="post" enctype="multipart/form-data">
+            <label class="input" for="idLinha2">ID</label>
+            <div class="controls">
+					<select class="span12" name="idLinha2" id="idLinha2" required="required">
+						<option value="" selected="selected" disabled="disabled">Escolha o ID</option>
+						<?php foreach($linha2 as $res):	extract($res); ?>
+							<option value=" <?= $id_linha2; ?> "> <?= $id_linha2 ?> </option>
+						<?php endforeach; ?>
+					</select>
+            </div>
+				<label class="control-label" for="titulo2">Titulo:</label>
+				<div class="controls">
+					<input type="text" class="span12" name="titulo2" id="titulo2" placeholder="Titulo do Atendimento" value="" required>
+				</div>
+				<label class="control-label" for="texto2">Texto</label>
+				<div class="controls">
+					<textarea class="span12" name="texto2" id="texto2" rows="5"></textarea>
+				</div>
+				<label class="control-label" for="imgLinha2">IMG</label>
+				<div class="controls">
+					<input type="text" class="span10" id="uploadFile2" placeholder="Escolha a imagem" value="" disabled="disabled" />
+					<div class="fileUpload btn btn-primary">
+						<span>Upload</span>
+						<input type="file" class="upload" name="imgLinha2" id="arquiv2" onchange="filePathEdit();" required>
+					</div>
+				</div>
+            <div class="controls">
+					<label class="" for="idAtivo21">Ativo</label><input checked="checked" type="radio" name="ativo" id="idAtivo21" value="1">
+					<label class="" for="idAtivo22">Dasativado</label><input type="radio" name="ativo" id="idAtivo22" value="0">
+				</div>
+            <div class="controls">
+               <input type="submit" name="editar" class="btn btn-inverse" value="Editar" />
+            </div>
+           </form>
+   	</div>
+   </div>
+   <!--
+	// Tabela com os dados do BD
+	-->
+	<div class="row-fluid">
+	   <div class="span12">
+	      <div class="row-fluid">
+				<div class="span10 offset1">
+					<table class="table table-striped table-bordered table-crud">
+						<legend class="table">Dados Tabela Linha 2</legend>
+						<thead class="thead">
+							<tr>
+								<th>#</th>
+								<th>Titulo</th>
+								<th>Texto</th>
+								<th>Imagem</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php foreach($linha2 as $res):	extract($res); ?>
+							<tr>
+								<td><?php echo $id_linha2; ?></td>
+								<td><?php echo $titulo2; ?></td>
+								<td><?php echo $texto2; ?></td>
+								<td><?php echo "<img src='../../img/uploads/{$img_linha2}' alt='' width='50' >" ?></td>
+								<td><?php if($ativo == 1){echo "<a href='../actions/AtendimentoController.php?id=$id_linha2&active=false&table=linha2'><i class='icon-ok'></i></a>";}else{echo "<a href='../actions/AtendimentoController.php?id=$id_linha2&active=true&table=linha2'><i class='icon-off'></i></a>";} ?><?php  ?></td>
 							</tr>
 							<?php endforeach; ?>
 						</tbody>

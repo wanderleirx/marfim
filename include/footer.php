@@ -1,4 +1,3 @@
-<?php include_once('../functions/crud.php'); ?>
 <footer>
    <div class="row-fluid rodape">
       <div class="span12">
@@ -14,10 +13,9 @@
             </div>
             <div class="span3 " id="box2">
                <h3>Contatos</h3>
-               <?php $data = read('contatos', 'ds_contato, icon_contato', "WHERE nm_contato = 'Email' OR nm_contato = 'Telefone'") ;?>
                <ul>
-                  <?php foreach($data as $res): extract($res) ?>
-                     <li><?php echo "<img src='../img/uploads/$icon_contato' class='img-responsive' alt=''>";?> <span><?php echo $ds_contato; ?></span> </li>
+                  <?php foreach($contatos as $res): extract($res) ?>
+                     <li><?= "<img src='../img/uploads/$icon_contato' class='img-responsive' alt=''>";?> <span><?php echo $ds_contato; ?></span> </li>
                   <?php endforeach; ?>
                </ul>
             </div>

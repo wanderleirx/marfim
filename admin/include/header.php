@@ -20,6 +20,7 @@
                         <li class="item-menu"><a class="link-menu" href="contatos.php">CONTATOS</a></li>
                         <li class="item-menu"><a class="link-menu" href="banner.php">BANNER</a></li> <li class="item-menu"><a class="link-menu" href="atendimento.php">ATENDIMENTO</a></li>
                         <li class="item-menu"><a class="link-menu" href="tabela-preco.php">TABELA PREÇO</a></li>
+                        <li class="item-menu"><a class="link-menu" href="orcamentos.php">ORÇAMENTOS</a></li>
                      </ul>
                   </div> <!-- Fim Itens Menu -->
                </div> <!-- Fim Container -->

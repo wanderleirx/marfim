@@ -33,7 +33,7 @@
 				<input type="hidden" name="operacao" value="create">
 				<label class="control-label" for="imgBanner">IMG</label>
 				<div class="controls">
-					<input type="text" class="span10" id="uploadFile" placeholder="Escolha a imagem" value="" disabled="disabled" />
+					<input type="text" class="span9" id="uploadFile" placeholder="Escolha a imagem" value="" disabled="disabled" />
 					<div class="fileUpload btn btn-primary">
 						<span>Upload</span>
 						<input type="file" class="upload" name="imgBanner" id="arquivo" onchange="filePathCreate();" value="" required>
@@ -66,7 +66,7 @@
                <input type="hidden" name="operacao" value="edit">
 					<label class="input" for="imgBanner">IMG</label>
 					<div class="controls">
-						<input type="text" class="span10" id="uploadFile2" placeholder="Escolha a imagem" value="" disabled="disabled" />
+						<input type="text" class="span9" id="uploadFile2" placeholder="Escolha a imagem" value="" disabled="disabled" />
 						<div class="fileUpload btn btn-primary">
 							<span>Upload</span>
 							<input  type="file" class="upload" name="imgBanner" id="arquivo2" onchange="filePathEdit();" value="" required>

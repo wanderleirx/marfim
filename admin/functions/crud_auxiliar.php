@@ -29,24 +29,26 @@ function createArrayContactsTable ($nm_contato, $ds_contato, $icon_contato, $cru
 		die('Paramantro "$crud" foi passado de maneira errada para a função ("createArrayContactsTable")');
 };
 
-//========= Tabela Serviço =================//
+//========= Tabela Atendimento =================//
 
-function createArrayAtendiemntoTable ($titulo, $texto, $img_atendimento, $crud) {
-	if(!isset($titulo, $texto, $img_atendimento))
+function createArrayLinha1Table ($titulo1, $texto1, $img_linha1, $ativo, $crud) {
+	if(!isset($titulo1, $texto1, $ativo, $img_linha1))
 		die("Um ou mais parametro esta com indefinido");
 
 	if($crud == 'create'){	
 		$array = array(
-				'titulo'          => $titulo,
-				'texto'           => $texto,
-				'img_atendimento' => $img_atendimento
+				'titulo1'    => $titulo1,
+				'texto1'     => $texto1,
+				'img_linha1' => $img_linha1,
+				'ativo'      => $ativo
 			);
 		return $array;
 	}elseif($crud == 'update'){
 		$array = array(
-				'titulo'          => $titulo,
-				'texto'           => $texto,
-				'img_atendimento' => $img_atendimento
+				'titulo1'    => $titulo1,
+				'texto1'     => $texto1,
+				'img_linha1' => $img_linha1,
+				'ativo'      => $ativo
 			);
 		$newArray = array();
 		foreach($array as $key => $value){
@@ -57,6 +59,36 @@ function createArrayAtendiemntoTable ($titulo, $texto, $img_atendimento, $crud) 
 	}else
 		die('Paramantro "$crud" foi passado de maneira errada para a função ("createArrayAtendimentoTable")');
 };
+
+function createArrayLinha2Table ($titulo2, $texto2, $img_linha2, $ativo, $crud) {
+	if(!isset($titulo2, $texto2, $ativo, $img_linha2))
+		die("Um ou mais parametro esta com indefinido");
+
+	if($crud == 'create'){	
+		$array = array(
+				'titulo2'    => $titulo2,
+				'texto2'     => $texto2,
+				'img_linha2' => $img_linha2,
+				'ativo'      => $ativo
+			);
+		return $array;
+	}elseif($crud == 'update'){
+		$array = array(
+				'titulo2'    => $titulo2,
+				'texto2'     => $texto2,
+				'img_linha2' => $img_linha2,
+				'ativo'      => $ativo
+			);
+		$newArray = array();
+		foreach($array as $key => $value){
+			if($value != null)
+				$newArray[$key] = $value;
+		}
+		return $newArray;
+	}else
+		die('Paramantro "$crud" foi passado de maneira errada para a função ("createArrayAtendimentoTable")');
+};
+
 
 //========= Tabela Serviços =================//
 
